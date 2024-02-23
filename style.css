@@ -1,63 +1,77 @@
-*{
+* {
     margin: 0;
     padding: 0;
     text-align: center;
 }
 
-h1{
+h1 {
     background-color: #081b31;
     color: white;
     height: 5rem;
     line-height: 5rem;
 }
 
-.choice{
+.choice {
     height: 165px;
     width: 165px;
 }
 
-.choice:hover{
+.choice:hover {
     opacity: 0.5;
     cursor: pointer;
 }
 
-img{
+img {
     height: 150px;
     width: 150px;
     object-fit: cover;
     border-radius: 50%;
 }
 
-.choices{
+.choices {
     display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
     align-items: center;
     justify-content: center;
-    gap: 5rem;
-    margin-top: 5rem;
+    gap: 2rem; /* Reduce the gap between items */
+    margin-top: 3rem;
 }
 
-.score-board{
+.score-board {
     display: flex;
+    /* flex-direction: column; Stack the scores vertically on smaller screens */
     justify-content: center;
     align-items: center;
     font-size: 2rem;
     margin-top: 3rem;
-    gap: 5rem;
+    gap: 2rem; /* Reduce the gap between scores */
 }
 
-#user-score, #comp-score{
+#user-score,
+#comp-score {
     font-size: 4rem;
 }
 
-.msg-container{
-    margin-top: 5rem;
+.msg-container {
+    margin-top: 3rem;
 }
 
-#msg{
+#msg {
     background-color: #081b31;
     color: #fff;
     font-size: 2rem;
     display: inline;
     border-radius: 1rem;
     padding: 1rem;
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+    .choices {
+        gap: 1rem; /* Adjust the gap for smaller screens */
+    }
+
+    .score-board {
+        gap: 1rem; /* Adjust the gap between scores for smaller screens */
+    }
 }
